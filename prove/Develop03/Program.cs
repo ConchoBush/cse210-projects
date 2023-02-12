@@ -5,7 +5,7 @@ class Program
     static void Main(string[] args)
     {
         
-        //Create scripture references
+        //Create scripture references.
         Reference r1 = new Reference("3rd Nephi", 12, 3, 3);
         Scripture s1 = new Scripture("Yea blessed are the poor in spirit who come unto me for theirs is the kingdom of heaven.");
         Reference r2 = new Reference("Proverbs", 3, 5, 6);
@@ -39,7 +39,6 @@ class Program
         else if (choice == 2)
         {
             Console.WriteLine("Please provide the reference and scripture text.");
-
             String d = Console.ReadLine();
             //call function for scripture memorization 
             Console.WriteLine(hider(d));
@@ -48,15 +47,11 @@ class Program
         else if (choice == 3)
         {
             Console.WriteLine("GoodBye");
-            
         }
-
         else
         {
             Console.WriteLine("That was not a valid choice, ending program");
         }
-        
-       
         //Hide words after pressing enter
         static String hider(String text)
         {
@@ -77,7 +72,8 @@ class Program
     }
         foreach (String i in wordList)
             result += i + " ";
-                return result;     
+                return result;
+                string again = result;    
         //I dont know how to get this loop to work.  I tried while and other ways, but I am struggling and I spend 20+ hours on this program to fail at it. 
          Console.WriteLine("Press Enter to hide text or type 'Quit' to finish");  
                 string con = Console.ReadLine();
@@ -87,7 +83,7 @@ class Program
                 } 
                 else
                 {
-                    Console.WriteLine(hider(result));
+                    Console.WriteLine(hider(again));
                 }
         }
     }
